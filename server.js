@@ -3,12 +3,19 @@ if (!process.env.PORT) {
   process.env.NODE_ENV = "dev"
 }
 
+// express: for Node.js
 const express = require('express');
+// path: Node module for handling and transforming file paths
 const path = require('path');
+// serve-favicon: improve performance by caching icons
 const favicon = require('serve-favicon');
+// morgan: generate request logs
 const logger = require('morgan');
+// cookie-parser: parses cookies attached to the client request object
 const cookieParser = require('cookie-parser');
+// body-parser: parses the incoming request bodies prior to dev handling
 const bodyParser = require('body-parser');
+// method-override: allows HTTP verbs like PUT or DELETE when client doesn’t support it
 const methodOverride = require('method-override')
 
 const app = express();
